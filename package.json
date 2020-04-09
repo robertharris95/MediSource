@@ -23,6 +23,11 @@
     "axios": "^0.19.2",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+<<<<<<< HEAD
     "mongoose": "^5.9.7"
+=======
+    "react": "^16.13.1",
+    "react-router-dom": "^5.1.2"
+>>>>>>> d2ad242b03d3ef55cd4c61fa7fbc04a9a3039d18
   }
 }

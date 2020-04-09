@@ -1,21 +1,27 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Container from "./components/Container";
+import Wrapper from "./components/Wrapper";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Main from "./Pages/Main"
+import Login from "./Pages/Login"
+import Profile from "./Pages/Profile"
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+        render(){
+    
+            return(
+                <>
+                <Router>
 
+                    {/* <Route exact path="/main" component={Main} /> */}
+                    <Route exact path="/" component={Login} />
+                    {/* <Route exact path="/personal" component={Profile} /> */}
+
+                </Router>
+                
+                </>
+            )
+        }
+    }
 export default App;
