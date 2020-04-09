@@ -4,7 +4,7 @@ function LoginForm() {
     return (
         <>
 
-        <div class="card w-50 border-primary mx-auto">
+        <div class="card w-50 border-primary mx-auto shadow-lg">
         <br/>
         <br/>
             <form class="w-75 mx-auto">
