@@ -8,6 +8,7 @@ function Navbar() {
       <Link className="navbar-brand" to="/">
         <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource"/>
       </Link>
+      <img src={process.env.PUBLIC_URL + "/images/Medisource.png"}/>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
