@@ -6,7 +6,7 @@ function LoginHeader() {
         <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
       <Link className="navbar-brand" to="/">
-        Logo
+      <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource"/>
       </Link>
     </nav>
     </>)
