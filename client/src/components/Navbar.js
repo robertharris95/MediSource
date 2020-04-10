@@ -4,44 +4,37 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
-      <Link className="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
+      <Link className="navbar-brand" to="/main">
         <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource"/>
       </Link>
+      <Link className="navbar-brand" to="/main">
       <img src={process.env.PUBLIC_URL + "/images/Medisource.png"}/>
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/"
-              className={
-                window.location.pathname === "/" || window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Home
-            </Link>
-          </li>
-          
-          <li className="nav-item">
-            <Link
-              to="/school"
-              className={window.location.pathname === "/school" ? "nav-link active" : "nav-link"}
-            >
-              Searchbar
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/redesign"
-              className={window.location.pathname === "/redesign" ? "nav-link active" : "nav-link"}
-            >
-              Profile
-            </Link>
-          </li>
+      </Link>
+        <ul className="navbar-nav mr-auto">
         </ul>
-      </div>
+        
+        <div className="nav-item mr-4">
+            <form class="form-inline my-2 my-lg-0">
+            <div className="row">
+              <div className="col-12">
+                <input class="form-control mr-sm-2" type="search" placeholder="..."/>
+                <button class="btn btn-light btn-outline-primary my-2 my-sm-0  " type="submit">Search</button>
+              </div>
+            </div>
+            </form>
+
+        </div>
+
+          <div className=" justify-content-right">
+            <Link
+              to="/profile"
+              className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
+            >
+              <img src="https://via.placeholder.com/75" alt="Profile Pic"/>
+            </Link>
+          </div>
+          
     </nav>
     </>)
 }

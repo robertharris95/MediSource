@@ -14,9 +14,9 @@ class App extends Component {
                 <>
                 <Router>
 
-                    {/* <Route exact path="/main" component={Main} /> */}
+                    <Route exact path="/main" component={Main} />
                     <Route exact path="/" component={Login} />
-                    {/* <Route exact path="/personal" component={Profile} /> */}
+                    {/* <Route exact path="/profile" component={Profile} /> */}
 
                 </Router>
                 

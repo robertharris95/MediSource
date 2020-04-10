@@ -8,7 +8,7 @@ function SignUpHere() {
         <>
         <div className="card w-25 mx-auto shadow">
             <div className="card-body text-center">
-                New to Medisource? <button style={textstyle} data-toggle="modal" data-target="#signupModal">Sign Up Here!</button>
+                New to MediSource? <button style={textstyle} data-toggle="modal" data-target="#signupModal">Sign Up Here!</button>
             </div>
         </div>
         </>)
