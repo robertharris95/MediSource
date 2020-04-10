@@ -4,10 +4,10 @@ function LoginForm() {
     return (
         <>
 
-        <div class="card w-50 border-primary mx-auto shadow-lg">
+        <div className="card w-50 border-primary mx-auto shadow-lg">
         <br/>
         <br/>
-            <form class="w-75 mx-auto">
+            <form className="w-75 mx-auto">
             <div className="form-group">
                 <input type="email" className="form-control form-control-lg" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email"/>
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -15,7 +15,7 @@ function LoginForm() {
             <div className="form-group">
                 <input type="password" className="form-control form-control-lg" id="InputPassword" placeholder="Password"/>
             </div>
-            <div class="text-center">
+            <div className="text-center">
             <button type="submit" className="btn btn-primary btn-block mx-auto w-75 ">Log In</button>
             </div>
             </form>
