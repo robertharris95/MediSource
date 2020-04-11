@@ -25,6 +25,8 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.9.7",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "three": "^0.115.0",
+    "vanta": "^0.5.14"
   }
 }

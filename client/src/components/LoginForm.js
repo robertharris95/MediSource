@@ -14,14 +14,12 @@ function LoginForm() {
     }
 
     const loginAttempt = (e) => {
-        // let ems = document.getElementById("email");
-        // let pass = document.getElementById("password");
+        let ems = document.getElementById("email");
+        let pass = document.getElementById("password");
         e.preventDefault();
         console.log(field)
         // API.loginAttempt(field)
-        // setField({ email: "", password: ""})
-        // ems.innerHTML("");
-        // pass.innerHTML("");
+        setField({ email: "", password: ""})
     }
 
     return (
@@ -32,11 +30,11 @@ function LoginForm() {
         <br/>
             <form className="w-75 mx-auto">
             <div className="form-group">
-                <input type="email" id="email" name="email" onChange={handleChange} className="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Enter email"/>
+                <input type="email" id="email" name="email" onChange={handleChange} className="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Enter email" value={field.email}/>
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div className="form-group">
-                <input type="password" id="password" name="password" onChange={handleChange} id="pass" className="form-control form-control-lg" placeholder="Password"/>
+                <input type="password" id="password" name="password" onChange={handleChange} id="pass" className="form-control form-control-lg" placeholder="Password" value={field.password}/>
             </div>
             <div className="text-center">
             <button type="submit" onClick = {loginAttempt} className="btn btn-primary btn-block mx-auto w-75 ">Log In</button>
