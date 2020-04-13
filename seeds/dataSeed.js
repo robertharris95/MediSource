@@ -26,6 +26,24 @@ const entitySeed = [
     }
 ];
 
+const postSeed = [
+    {
+        img: "https://picsum.photos/200/300",
+        username: "John Doe",
+        body: "When I was a young Warthog"
+    },
+    {
+        img: "https://picsum.photos/400/300",
+        username: "Cloud",
+        body: "And this is why they've ruined me forever"
+    },
+    {
+        img: "https://picsum.photos/600/800",
+        username: "Ad",
+        body: "10 EASY STEPS TO BECOME A WEB DEVELOPER!"
+    }
+];
+
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
@@ -41,6 +59,18 @@ db.User
 db.Entity
   .remove({})
   .then(() => db.Entity.collection.insertMany(entitySeed))
+  .then(data => {
+      console.log(data.result.n + " records inserted.")
+      process.exit(0);
+  })
+  .catch(err => {
+      console.error(err);
+      process.exit(1);
+  });
+
+db.Post
+  .remove({})
+  .then(() => db.Post.collection.insertMany(postSeed))
   .then(data => {
       console.log(data.result.n + " records inserted.")
       process.exit(0);
