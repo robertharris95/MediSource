@@ -8,7 +8,7 @@ function Sidebar() {
                 <div className="list-group list-group-flush">
                     <a href="#" className="list-group-item list-group-item-action bg-light" data-toggle="modal" data-target="#NewPostModal">New Post</a>
                     <a href="#" className="list-group-item list-group-item-action bg-light">Favorites</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-light">Help</a>
+                    <a href="#" className="list-group-item list-group-item-action bg-light" data-toggle="modal" data-target="#HelpModal">Help</a>
                 </div>
                 </div>
             </div>
