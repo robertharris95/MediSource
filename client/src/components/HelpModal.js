@@ -14,8 +14,8 @@ function HelpModal() {
             </div>
             <div className="modal-body">
                 <form className="w-75 mx-auto">
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <label htmlFor="exampleFormControlFile1">If applicable, attach a screenshot of your error message:</label>
+                    <textarea className="form-control" id="HelpTextarea1" rows="5" placeholder="Describe your issue here..."></textarea>
+                    <label htmlFor="HelpFile1">If applicable, attach a screenshot of your error message:</label>
                     <input type="file" className="form-control-file" id="PostPicFile"/>
                     <br/>
                     <button type="submit" className="btn btn-primary mb-2">Post</button>

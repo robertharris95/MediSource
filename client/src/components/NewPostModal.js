@@ -37,11 +37,13 @@ function NewPostModal() {
             </div>
             <div className="modal-body">
                 <form className="w-75 mx-auto">
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <label htmlFor="exampleFormControlFile1">Add picture files here:</label>
+                <input type="Title" name="title" onChange= {handleInput} className="form-control form-control-lg" id="InputTitle" aria-describedby="TitleHelp" placeholder="Enter a Title"/>
+                <br/>
+                    <textarea className="form-control" id="PostTextarea1" rows="5" type="Body" name="body" onChange={handleInput} placeholder="Say Something..."></textarea>
+                    <label htmlFor="PostFile1">Add picture files here:</label>
                     <input type="file" className="form-control-file" id="PostPicFile"/>
                     <br/>
-                    <button type="submit" className="btn btn-primary mb-2">Post</button>
+                    <button type="submit" className="btn btn-primary mb-2" onClick={handleClick}>Post</button>
                 </form>
                     <br/>
             </div>
