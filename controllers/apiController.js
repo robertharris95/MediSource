@@ -1,8 +1,8 @@
 const db = require("../models");
 
 module.exports = {
-    findAllUser: function(req, res) {
-        db.User
+    getDB: function(req, res) {
+        db.Post
           .find(req.query)
           .sort({ date: -1 })
           .then(dbModel => res.json(dbModel))
