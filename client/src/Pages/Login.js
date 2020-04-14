@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import LoginHeader from "../components/LoginHeader";
 import LoginForm from "../components/LoginForm";
 import SignUpHere from "../components/SignUpHere";

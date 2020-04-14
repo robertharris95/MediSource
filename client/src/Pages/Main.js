@@ -33,8 +33,6 @@ function Main(){
                 <Post image= {element.img} user= {element.username} body= {element.body}/>
             )
         })}
-        <Post/><Post/><Post/>
-        
         </div>
         </div>
         <NewPostModal/>

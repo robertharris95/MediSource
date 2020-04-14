@@ -1,5 +1,6 @@
 import React from "react";
-
+import ProfilePosts from "./ProfilePosts"
+import PersonalInfo from "./PersonalInfo"
 function LargeProfilePic() {
     return (
         <>
@@ -9,12 +10,13 @@ function LargeProfilePic() {
             <div className="col-6 ml-4">
                 <div class="card">
                     <div class="card-body">
-                        Posts
+                        <h4>Posts</h4>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
+                        <ProfilePosts/>
                     </div>
                 </div>
                 <br/>
@@ -23,17 +25,18 @@ function LargeProfilePic() {
                 <br/>
                 <div class="card">
                     <div class="card-body">
-                        Profile Info
+                        <h4>Profile Info</h4>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
                         <br/>
+                        <PersonalInfo/>
                     </div>
                 </div>
             </div>
             <div className="col-3">
-                <img src="https://via.placeholder.com/350" alt="profile picture" />
+                <img src="https://via.placeholder.com/350" alt="full profile avi" />
                 <br/>
                 <br/>
                 <div className="card" style={{width: 350}}>

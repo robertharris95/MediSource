@@ -6,20 +6,21 @@ function Navbar() {
         <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
       <Link className="navbar-brand" to="/main">
-        <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource"/>
+        <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource Logo"/>
       </Link>
       <Link className="navbar-brand" to="/main">
-      <img src={process.env.PUBLIC_URL + "/images/Medisource.png"}/>
+      <img src={process.env.PUBLIC_URL + "/images/Medisource.png"} alt="MediSource"/>
       </Link>
+      <a class="nav-link" href="#" style={{color:"white"}}>Log Out <span class="sr-only">(current)</span></a>
         <ul className="navbar-nav mr-auto">
         </ul>
         
         <div className="nav-item mr-4">
-            <form class="form-inline my-2 my-lg-0">
+            <form className="form-inline my-2 my-lg-0">
             <div className="row">
               <div className="col-12">
-                <input class="form-control mr-sm-2" type="search" placeholder="..."/>
-                <button class="btn btn-light btn-outline-primary my-2 my-sm-0  " type="submit">Search</button>
+                <input className="form-control mr-sm-2" type="search" placeholder="..."/>
+                <button className="btn btn-light btn-outline-primary my-2 my-sm-0  " type="submit">Search</button>
               </div>
             </div>
             </form>
