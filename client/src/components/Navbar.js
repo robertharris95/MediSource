@@ -11,6 +11,7 @@ function Navbar() {
       <Link className="navbar-brand" to="/main">
       <img src={process.env.PUBLIC_URL + "/images/Medisource.png"} alt="MediSource"/>
       </Link>
+      <a class="nav-link" href="#" style={{color:"white"}}>Log Out <span class="sr-only">(current)</span></a>
         <ul className="navbar-nav mr-auto">
         </ul>
         
