@@ -10,14 +10,14 @@ function LoginForm() {
     function handleChange (e) {
         const {name, value} = e.target;
         setField({...field, [name]: value});
-        console.log(field)
+        // console.log(field)
     }
 
     const loginAttempt = (e) => {
-        let ems = document.getElementById("email");
-        let pass = document.getElementById("password");
+        // let ems = document.getElementById("email");
+        // let pass = document.getElementById("password");
         e.preventDefault();
-        console.log(field)
+        // console.log(field)
         // API.loginAttempt(field)
         setField({ email: "", password: ""})
     }
