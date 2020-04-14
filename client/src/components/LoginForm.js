@@ -6,7 +6,7 @@ import API from "../utils/API";
 
 function LoginForm() {
     const [field, setField] = useState({
-        email: "",
+        username: "",
         password: "",
         redirectTo: null
     });
@@ -21,16 +21,12 @@ function LoginForm() {
         // let ems = document.getElementById("email");
         // let pass = document.getElementById("password");
         e.preventDefault();
-        // console.log(field)
+        console.log(field)
         API.loginAttempt(field)
           .then(res => {
               console.log('login response: ')
               console.log(res)
             if (res.status === 200) {
-                this.props.updateUser({
-                    loggedIn: true,
-                    username: res.data.username
-                })
                 setField({
                     redirectTo: '/main'
                 })
@@ -43,12 +39,13 @@ function LoginForm() {
     return (
         <>
 
+        {field.redirectTo ? <Redirect to= "/main" /> :null}
         <div className="card w-50 border-primary mx-auto shadow-lg">
         <br/>
         <br/>
             <form className="w-75 mx-auto">
             <div className="form-group">
-                <input type="email" id="email" name="email" onChange={handleChange} className="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Enter email" value={field.email}/>
+                <input type="email" id="email" name="username" onChange={handleChange} className="form-control form-control-lg" aria-describedby="emailHelp" placeholder="Enter email" value={field.email}/>
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div className="form-group">

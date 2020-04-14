@@ -3,12 +3,11 @@ const bcrypt = require("bcryptjs");
 const Schema = mongoose.Schema;
 mongoose.promise = Promise
 
-
 const userSchema = new Schema({
 
-    name: { type: String, required: true },
-    username: { type: String, required: true },
-    password: { type: String, required: true },
+    name: { type: String, required: false },
+    username: { type: String, unique: false, required: false },
+	password: { type: String, unique: false, required: false },
     date: { type: Date, default: Date.now }
 
 })
@@ -18,7 +17,7 @@ userSchema.methods = {
         return bcrypt.compareSync(input, this.password)
     },
     hashPassword: plainTextPassword => {
-        return bcrypt.hashSync(plainTextPassword, 10)
+        return bcrypt.hashSync(plainTextPassword, bcrypt.genSaltSync(10), null)
     }
 }
 
