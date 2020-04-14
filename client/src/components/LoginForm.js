@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 import API from "../utils/API";
+// import { response } from "express";
 
 
 function LoginForm() {
     const [field, setField] = useState({
         email: "",
-        password: ""
+        password: "",
+        redirectTo: null
     });
+
     function handleChange (e) {
         const {name, value} = e.target;
         setField({...field, [name]: value});
@@ -18,8 +22,22 @@ function LoginForm() {
         // let pass = document.getElementById("password");
         e.preventDefault();
         // console.log(field)
-        // API.loginAttempt(field)
-        setField({ email: "", password: ""})
+        API.loginAttempt(field)
+          .then(res => {
+              console.log('login response: ')
+              console.log(res)
+            if (res.status === 200) {
+                this.props.updateUser({
+                    loggedIn: true,
+                    username: res.data.username
+                })
+                setField({
+                    redirectTo: '/main'
+                })
+            }
+        }).catch(err => console.log(err))
+        
+        // setField({password: ""})
     }
 
     return (
