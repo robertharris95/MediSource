@@ -10,4 +10,7 @@ export default {
     // loginAttempt: function(fieldData){
     //     return axios.
     // }
+    PostUser: function(userData){
+        return axios.post("/api/data/", userData)
+    },
 }

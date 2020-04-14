@@ -17,7 +17,7 @@ function LoginForm() {
         // let ems = document.getElementById("email");
         // let pass = document.getElementById("password");
         e.preventDefault();
-        // console.log(field)
+        console.log(field)
         // API.loginAttempt(field)
         setField({ email: "", password: ""})
     }

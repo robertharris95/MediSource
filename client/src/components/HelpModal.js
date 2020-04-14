@@ -14,11 +14,11 @@ function HelpModal() {
             </div>
             <div className="modal-body">
                 <form className="w-75 mx-auto">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <label for="exampleFormControlFile1">If applicable, attach a screenshot of your error message:</label>
-                    <input type="file" class="form-control-file" id="PostPicFile"/>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <label htmlFor="exampleFormControlFile1">If applicable, attach a screenshot of your error message:</label>
+                    <input type="file" className="form-control-file" id="PostPicFile"/>
                     <br/>
-                    <button type="submit" class="btn btn-primary mb-2">Post</button>
+                    <button type="submit" className="btn btn-primary mb-2">Post</button>
                 </form>
                     <br/>
             </div>

@@ -1,6 +1,29 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import API from "../utils/API";
 
 function NewPostModal() {
+    const [PostObj, setPost] = useState({
+        title:"",
+        body:"",
+        image:"",
+        user:""
+    });
+
+    function handleInput(e){
+        const {name, value} = e.target;
+        setPost({...PostObj, [name]: value})
+    };
+
+    function handleClick(e){
+        e.preventDefault();
+        if (PostObj.title && PostObj.body && PostObj.image) {
+            API.PostUser(PostObj)
+              .catch(err => console.log(err));
+            console.log(PostObj);
+        }
+    }
+
+
     return (
         <>
         <div className="modal fade" id="NewPostModal" tabIndex="-1" role="dialog" aria-labelledby="NewPostModalLabel" aria-hidden="true">
@@ -14,11 +37,11 @@ function NewPostModal() {
             </div>
             <div className="modal-body">
                 <form className="w-75 mx-auto">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    <label for="exampleFormControlFile1">Add picture files here:</label>
-                    <input type="file" class="form-control-file" id="PostPicFile"/>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <label htmlFor="exampleFormControlFile1">Add picture files here:</label>
+                    <input type="file" className="form-control-file" id="PostPicFile"/>
                     <br/>
-                    <button type="submit" class="btn btn-primary mb-2">Post</button>
+                    <button type="submit" className="btn btn-primary mb-2">Post</button>
                 </form>
                     <br/>
             </div>
