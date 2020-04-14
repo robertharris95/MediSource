@@ -33,7 +33,7 @@ function LoginForm() {
             }
         }).catch(err => console.log(err))
         
-        // setField({password: ""})
+        setField({password: ""})
     }
 
     return (
