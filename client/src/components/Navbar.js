@@ -7,10 +7,10 @@ function Navbar() {
         <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
       <Link className="navbar-brand" to="/main">
-        <img src={process.env.PUBLIC_URL + "/images/Logo.png"} alt="MediSource Logo"/>
+        <img src={process.env.PUBLIC_URL + "/Images/Logo.png"} alt="MediSource Logo"/>
       </Link>
       <Link className="navbar-brand" to="/main">
-      <img src={process.env.PUBLIC_URL + "/images/Medisource.png"} alt="MediSource"/>
+      <img src={process.env.PUBLIC_URL + "/Images/Medisource.png"} alt="MediSource"/>
       </Link>
       <a 
       className="nav-link" 
