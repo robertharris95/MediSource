@@ -41,7 +41,7 @@ function SignUpModal() {
     
                 </div>
                 <div className="form-group">
-                    <input type="Username" name="username" onChange= {handleInput} className="form-control form-control-lg" id="InputUsername" aria-describedby="UsernameHelp" placeholder="Enter Username"/>
+                    <input type="Username" name="username" onChange= {handleInput} className="form-control form-control-lg" id="InputUsername" aria-describedby="UsernameHelp" placeholder="Enter Email"/>
     
                 </div>
                 <div className="form-group">
