@@ -28,18 +28,18 @@ const entitySeed = [
 
 const postSeed = [
     {
-        img: "https://picsum.photos/200/300",
-        username: "John Doe",
+        image: "https://picsum.photos/200/300",
+        user: "John Doe",
         body: "When I was a young Warthog"
     },
     {
-        img: "https://picsum.photos/400/300",
-        username: "Cloud",
+        image: "https://picsum.photos/400/300",
+        user: "Cloud",
         body: "And this is why they've ruined me forever"
     },
     {
-        img: "https://picsum.photos/600/800",
-        username: "Ad",
+        image: "https://picsum.photos/600/800",
+        user: "Ad",
         body: "10 EASY STEPS TO BECOME A WEB DEVELOPER!"
     }
 ];
