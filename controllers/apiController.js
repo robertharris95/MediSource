@@ -9,12 +9,34 @@ module.exports = {
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
     },
+
     registerUser: function(req, res) {
+        console.log("user signup");
+        const { name, username, password } = req.body
+
         db.User
-          .insertMany(req.body)
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err));
+          .findOne({ username: username }, (err, user) => {
+            if (err) {
+                console.log('User.js post error: ', err)
+            } else if (user) {
+                res.json({
+                    error: `Sorry, already a user with the username: ${username}`
+                })
+            }
+            else {
+                const newUser = new db.User({
+                    name: name,
+                    username: username,
+                    password: password
+                })
+                newUser.save((err, savedUser) => {
+                    if (err) return res.json(err)
+                    res.json(savedUser)
+                })
+            }
+        })
     },
+
     loginAttempt: function(req, res) {
       console.log('logged in', req.body);
       var userInfo = {

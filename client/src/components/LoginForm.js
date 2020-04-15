@@ -22,6 +22,8 @@ function LoginForm() {
         // let pass = document.getElementById("password");
         e.preventDefault();
         console.log(field)
+        setField({redirectTo: null})
+
         API.loginAttempt(field)
           .then(res => {
               console.log('login response: ')
@@ -30,6 +32,7 @@ function LoginForm() {
                 setField({
                     redirectTo: '/main'
                 })
+                console.log("200")
             }
         }).catch(err => console.log(err))
         
