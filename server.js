@@ -26,7 +26,7 @@ app.use( (req, res, next) => {
   return next();
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/medisource");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://username:password1@ds157276.mlab.com:57276/heroku_fk5k08f3");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
