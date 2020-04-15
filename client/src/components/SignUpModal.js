@@ -21,6 +21,7 @@ function SignUpModal() {
               .catch(err => console.log(err));
             console.log(registerObj);
         }
+        setRegister({name: "",username: "",password: ""})
     }
 
     return (
@@ -37,18 +38,18 @@ function SignUpModal() {
             <div className="modal-body">
                 <form className="w-75 mx-auto">
                 <div className="form-group">
-                    <input type="Name" name="name" onChange= {handleInput} className="form-control form-control-lg" id="InputName" aria-describedby="NameHelp" placeholder="Enter Name"/>
+                    <input type="Name" name="name" onChange= {handleInput} className="form-control form-control-lg" id="InputName" aria-describedby="NameHelp" placeholder="Enter Name" value={registerObj.name} />
     
                 </div>
                 <div className="form-group">
-                    <input type="Username" name="username" onChange= {handleInput} className="form-control form-control-lg" id="InputUsername" aria-describedby="UsernameHelp" placeholder="Enter Email"/>
+                    <input type="Username" name="username" onChange= {handleInput} className="form-control form-control-lg" id="InputUsername" aria-describedby="UsernameHelp" placeholder="Enter Email" value={registerObj.username}/>
     
                 </div>
                 <div className="form-group">
-                    <input type="password" name="password" onChange={handleInput} className="form-control form-control-lg" id="InputPassword" placeholder=" Enter Password"/>
+                    <input type="password" name="password" onChange={handleInput} className="form-control form-control-lg" id="InputPassword" placeholder=" Enter Password" value={registerObj.password}/>
                 </div>
                 <div className="text-center">
-                <button type="submit" onClick={handleClick} className="btn btn-primary btn-block mx-auto w-75 ">Register</button>
+                <button type="submit" onClick={handleClick} className="btn btn-primary btn-block mx-auto w-75 " data-dismiss="modal">Register</button>
                 </div>
                 </form>
                     <br/>
