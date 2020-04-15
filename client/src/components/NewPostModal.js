@@ -28,6 +28,7 @@ function NewPostModal() {
               .then(res => loading())
               .catch(err => console.log(err));
             console.log(PostObj);
+            window.location.reload(false)
         }
     }
 
