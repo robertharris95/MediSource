@@ -48,8 +48,7 @@ db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
-      console.log(data.result.n + " records inserted.")
-      process.exit(0);
+      console.log(data.result.n + " records inserted.");
   })
   .catch(err => {
       console.error(err);
@@ -60,8 +59,7 @@ db.Entity
   .remove({})
   .then(() => db.Entity.collection.insertMany(entitySeed))
   .then(data => {
-      console.log(data.result.n + " records inserted.")
-      process.exit(0);
+      console.log(data.result.n + " records inserted.");
   })
   .catch(err => {
       console.error(err);
@@ -69,13 +67,12 @@ db.Entity
   });
 
 db.Post
-  .remove({})
-  .then(() => db.Post.collection.insertMany(postSeed))
-  .then(data => {
-      console.log(data.result.n + " records inserted.")
-      process.exit(0);
-  })
-  .catch(err => {
-      console.error(err);
-      process.exit(1);
-  });
+.remove({})
+.then(() => db.Post.collection.insertMany(postSeed))
+.then(data => {
+    console.log(data.result.n + " records inserted.");
+})
+.catch(err => {
+    console.error(err);
+    process.exit(1);
+});

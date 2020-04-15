@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema ({
-    img:  String,
-    username: {type: String, required: true},
+    image:  String,
+    title: String,
+    user: {type: String, required: false},
     body: {type: String, required: true}
 })
 

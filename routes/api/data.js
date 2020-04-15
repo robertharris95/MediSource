@@ -16,6 +16,9 @@ router.route("/")
 router.route("/new")
   .post(apiController.registerUser);
 
+router.route("/newPost")
+  .post(apiController.newPost);
+
 //   .post(function (req, res, next) {
 //     console.log('routes/user.js, login, req.body: ');
 //     console.log(req.body)

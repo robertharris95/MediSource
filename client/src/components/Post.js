@@ -6,9 +6,9 @@ function Post(props) {
         <br/>
         <div className="card">
             {/* picture with clickable link */}
-            <img src={props.image} alt={props.user}/>
+            <img src={props.image} alt={props.alt}/>
             {/* Name with clickable link */}
-            <h5><span> {props.user} </span> </h5>
+            <h5><span> {props.title} </span> </h5>
             <p>{props.body}</p>
         </div>
         <br/>

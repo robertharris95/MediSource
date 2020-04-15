@@ -6,8 +6,15 @@ function NewPostModal() {
         title:"",
         body:"",
         image:"",
-        user:""
+        user:"",
+        postAttempt: false
     });
+
+    function loading(){
+        API.getDB()
+          .then(res => setPost(res.data))
+          .catch(err => console.log(err))
+    }
 
     function handleInput(e){
         const {name, value} = e.target;
@@ -15,11 +22,12 @@ function NewPostModal() {
     };
 
     function handleClick(e){
-        e.preventDefault();
-        if (PostObj.title && PostObj.body && PostObj.image) {
-            API.PostUser(PostObj)
+        // e.preventDefault();
+        if (PostObj.title && PostObj.body) {
+            API.postUser(PostObj)
+              .then(res => loading())
               .catch(err => console.log(err));
-            console.log(PostObj);
+            // console.log(PostObj);
         }
     }
 
@@ -43,7 +51,7 @@ function NewPostModal() {
                     <label htmlFor="PostFile1">Add picture files here:</label>
                     <input type="file" className="form-control-file" id="PostPicFile"/>
                     <br/>
-                    <button type="submit" className="btn btn-primary mb-2" onClick={handleClick}>Post</button>
+                    <button type="submit" className="btn btn-primary mb-2" onClick={handleClick} data-dismiss="modal">Post</button>
                 </form>
                     <br/>
             </div>
