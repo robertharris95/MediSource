@@ -10,14 +10,18 @@ var db = require("../models");
       db.User
         .findOne({ username: username }, (err, user) => {
           if (err){
+            console.log("errors suxk")
             return done(err)
           }
           if(!user) {
+            console.log("waddup brutha")
             return done(null, false, { message: 'Incorrect username' })
           }
           if (!user.checkPassword(password)) {
+            console.log("gomenasorry")
             return done(null, false, { message: 'Incorrect password'})
           }
+          console.log(user)
           return done(null, user)
         })
     }
