@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import API from "../utils/API";
 
 function NewPostModal() {
@@ -22,10 +22,17 @@ function NewPostModal() {
     };
 
     function handleClick(e){
+<<<<<<< HEAD
         // e.preventDefault();
         if (PostObj.title && PostObj.body) {
             API.postUser(PostObj)
               .then(res => loading())
+=======
+        e.preventDefault();
+        console.log("click")
+        if (PostObj.title && PostObj.body) {
+            API.PostUser(PostObj)
+>>>>>>> c70b6356e2be4a2f51ec6da1c8b807f79695b9e3
               .catch(err => console.log(err));
             // console.log(PostObj);
         }
@@ -49,7 +56,7 @@ function NewPostModal() {
                 <br/>
                     <textarea className="form-control" id="PostTextarea1" rows="5" type="Body" name="body" onChange={handleInput} placeholder="Say Something..."></textarea>
                     <label htmlFor="PostFile1">Add picture files here:</label>
-                    <input type="file" className="form-control-file" id="PostPicFile"/>
+                    <input type="file" className="form-control-file" id="PostPicFile" onChange= {handleInput}/>
                     <br/>
                     <button type="submit" className="btn btn-primary mb-2" onClick={handleClick} data-dismiss="modal">Post</button>
                 </form>

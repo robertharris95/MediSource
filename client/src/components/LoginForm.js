@@ -30,7 +30,7 @@ function LoginForm() {
               console.log(res)
             if (res.status === 200) {
                 setField({
-                    redirectTo: '/main'
+                    redirectTo: true
                 })
                 console.log("200")
             }
