@@ -43,5 +43,12 @@ module.exports = {
           username: req.body.username
       };
       res.send(userInfo);
+    },
+    
+    newPost: function(req, res){
+        db.Post
+          .create(req.body)
+          .then(dbModel => res.json(dbModel))
+          .catch(err => res.status(422).json(err))
     }
 }

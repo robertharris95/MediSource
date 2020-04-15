@@ -22,7 +22,7 @@ function LoginForm() {
         // let pass = document.getElementById("password");
         e.preventDefault();
         console.log(field)
-        setField({redirectTo: null})
+        setField({...field, redirectTo: null})
 
         API.loginAttempt(field)
           .then(res => {
@@ -36,7 +36,7 @@ function LoginForm() {
             }
         }).catch(err => console.log(err))
         
-        setField({password: ""})
+        setField({...field, password: ""})
     }
 
     return (
