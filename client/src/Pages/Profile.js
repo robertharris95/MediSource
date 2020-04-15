@@ -7,7 +7,6 @@ function Profile(){
     return(
         <>
         <Navbar/>
-    
         <LargeProfilePic/>
         <ProfilePosts/>
         </>

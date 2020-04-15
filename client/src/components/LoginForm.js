@@ -28,7 +28,7 @@ function LoginForm() {
               console.log(res)
             if (res.status === 200) {
                 setField({
-                    redirectTo: '/main'
+                    redirectTo: true
                 })
             }
         }).catch(err => console.log(err))

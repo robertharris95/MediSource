@@ -7,7 +7,7 @@ function Sidebar() {
                 <div className="bg-light border-right nav-fill" id="sidebar-wrapper">
                 <div className="list-group list-group-flush">
                     <a href="#" className="list-group-item list-group-item-action bg-light" data-toggle="modal" data-target="#NewPostModal">New Post</a>
-                    <a href="#" className="list-group-item list-group-item-action bg-light">Favorites</a>
+                    <a href="#" className="list-group-item list-group-item-action bg-light" data-toggle="modal" data-target="#ComingSoon">Favorites</a>
                     <a href="#" className="list-group-item list-group-item-action bg-light" data-toggle="modal" data-target="#HelpModal">Help</a>
                 </div>
                 </div>

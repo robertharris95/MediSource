@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
     return (
         <>
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary menu">
@@ -11,7 +12,13 @@ function Navbar() {
       <Link className="navbar-brand" to="/main">
       <img src={process.env.PUBLIC_URL + "/images/Medisource.png"} alt="MediSource"/>
       </Link>
-      <a class="nav-link" href="#" style={{color:"white"}}>Log Out <span class="sr-only">(current)</span></a>
+      <a 
+      className="nav-link" 
+      href="/" 
+      style={{color:"white"}}
+      >
+        Log Out 
+        </a>
         <ul className="navbar-nav mr-auto">
         </ul>
         

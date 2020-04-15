@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Post from "../components/Post";
 import Sidebar from "../components/Sidebar"
 import NewPostModal from "../components/NewPostModal";
 import HelpModal from "../components/HelpModal";
 import API from "../utils/API";
+import ComingSoon from "../components/ComingSoon";
 
 function Main(){
     const [dbArray, getArray] = useState([]);
 
     useEffect(()=> {
         getAll()
-        // console.log(API);
     }, [])
 
     function getAll() {
@@ -37,6 +36,7 @@ function Main(){
         </div>
         <NewPostModal/>
         <HelpModal/>
+        <ComingSoon/>
      </>
     )
 }
