@@ -25,7 +25,7 @@ function Post(props) {
                 </div>
             
                 <div className="col-5 offset-1 justify-content-center">
-                    <img src={props.image} alt={props.alt}/>
+                    <img src={props.image} alt={props.alt} className="img-responsive fit-image"/>
                 </div>
             </div>
         </div>

@@ -26,8 +26,8 @@ function Navbar() {
             <form className="form-inline my-2 my-lg-0">
             <div className="row">
               <div className="col-12">
-                <input className="form-control mr-sm-2" type="search" placeholder="..."/>
-                <button className="btn btn-light btn-outline-primary my-2 my-sm-0  " type="submit">Search User</button>
+                {/* <input className="form-control mr-sm-2" type="search" placeholder="..."/>
+                <button className="btn btn-light btn-outline-primary my-2 my-sm-0  " type="submit">Search User</button> */}
               </div>
             </div>
             </form>
