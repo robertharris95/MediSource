@@ -1,6 +1,30 @@
 import React from "react";
 
 function Post(props) {
+     let cardbody=""
+    if(props.image){
+     cardbody=
+    <div className="row card-body">
+        <div className=" col-6">
+        <h4 className="card-title"><span> {props.title} </span> </h4>
+        <hr/>
+            <p className="card-text">{props.body}</p>
+        </div>
+        <div className="col-5 offset-1 justify-content-center">
+            <img src={props.image} alt={props.alt} className="img-responsive fit-image"/>
+        </div>
+    </div>
+    }
+    else{
+    cardbody=
+    <div className="row card-body">
+        <div className=" col-12">
+        <h4 className="card-title"><span> {props.title} </span> </h4>
+        <hr/>
+            <p className="card-text">{props.body}</p>
+        </div>
+    </div>
+    }
     return (
         <>
         <br/>
@@ -9,7 +33,7 @@ function Post(props) {
                 <div className="row">
                     <div className="col-1">
                     {/* Profile picture with clickable link */}
-                    <img src="https://via.placeholder.com/50" alt="Profile Pic" className="rounded-circle"/>
+                    <img src="https://via.placeholder.com/350" alt="Profile Pic" className="rounded-circle post-pic"/>
                     </div>
                     <div className="col-8">
                     {/* Name with clickable link */}
@@ -17,17 +41,17 @@ function Post(props) {
                     </div>
                 </div>
             </div>
-            <div className="row card-body">
+            {cardbody}
+            {/* <div className="row card-body">
                 <div className=" col-6">
                 <h4 className="card-title"><span> {props.title} </span> </h4>
                 <hr/>
                     <p className="card-text">{props.body}</p>
                 </div>
-            
                 <div className="col-5 offset-1 justify-content-center">
                     <img src={props.image} alt={props.alt} className="img-responsive fit-image"/>
                 </div>
-            </div>
+            </div> */}
         </div>
         <br/>
         </>

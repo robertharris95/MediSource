@@ -39,7 +39,7 @@ function Navbar() {
               to="/profile"
               className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
             >
-              <img src="https://via.placeholder.com/75" alt="Profile Pic" className="rounded"/>
+              <img src="https://via.placeholder.com/350" alt="Profile Pic" className="rounded nav-pic"/>
             </Link>
           </div>
           
