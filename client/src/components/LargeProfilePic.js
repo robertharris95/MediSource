@@ -8,8 +8,8 @@ function LargeProfilePic() {
         <div className="row ">
             <div className="col-2"/>
             <div className="col-6 ml-4">
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h4>Posts</h4>
                         <br/>
                         <br/>
@@ -23,8 +23,8 @@ function LargeProfilePic() {
                 <br/>
                 <br/>
                 <br/>
-                <div class="card">
-                    <div class="card-body">
+                <div className="card">
+                    <div className="card-body">
                         <h4>Profile Info</h4>
                         <hr/>
                         <br/>
@@ -54,7 +54,7 @@ function LargeProfilePic() {
                 <br/>
                 <br/>
                 <div className="card" style={{width: 350}}>
-                <div class="card-body">
+                <div className="card-body">
                 <h2>Dr. Kahla Nizhisht</h2>
                     </div>
 
