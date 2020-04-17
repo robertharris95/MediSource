@@ -1,29 +1,25 @@
-.App {
-  text-align: center;
+.username {
+  margin-top: 2%;
+  color:#0275d8;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.fit-image{
+  width: 100%;
+  object-fit: cover;
+  height: 350px;
+  }
+
+.post-pic{
+  width: 50px;
+  object-fit: cover;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.nav-pic{
+  width: 75px;
+  object-fit: cover;
+  height: 75px;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-
 /* Sidebar  */
 
 body {

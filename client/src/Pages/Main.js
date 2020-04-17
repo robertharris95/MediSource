@@ -52,17 +52,11 @@ function Main(){
         <Sidebar/>
         <div className="col-8">
         <br/>
-        {dbArray.image ? (
-            dbArray.map(element => {
+        {
+            dbArray.reverse().map(element => {
             return(
-                <Post image= {element.image} alt= {element.alt} title= {element.title} body= {element.body}/>
-            )}
-        )) : (
-            dbArray.map(element => {
-            return(
-                <Post title= {element.title} body= {element.body}/>
-            )}
-        ))
+                <Post image= {element.image} alt= {element.alt} title= {element.title} body= {element.body} username={element.user}/>
+            )})
         }
         </div>
         </div>

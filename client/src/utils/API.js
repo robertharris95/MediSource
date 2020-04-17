@@ -1,5 +1,4 @@
 import axios from "axios";
-// import passport from "passport";
 export default {
     getDB: function () {
         return axios.get("/api/data");
@@ -14,6 +13,6 @@ export default {
         return axios.post("/api/data", fieldData)
     },
     postUser: function(postObj){
-        return axios.post("/api/data/newPost/", postObj)
+        return axios.post("/api/data/newPost", postObj)
     }
 }

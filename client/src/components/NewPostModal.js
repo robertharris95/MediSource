@@ -30,7 +30,8 @@ function NewPostModal() {
             API.postUser(PostObj)
               .then(res => loading())
               .catch(err => console.log(err));
-            // console.log(PostObj);
+            console.log(PostObj);
+            window.location.reload(false)
         }
     }
 

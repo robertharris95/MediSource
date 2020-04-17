@@ -36,7 +36,7 @@ function LargeProfilePic() {
                 </div>
             </div>
             <div className="col-3">
-                <img src="https://via.placeholder.com/350" alt="full profile avi" />
+                <img src="https://via.placeholder.com/350" alt="full profile avi" className="rounded-lg" />
                 <br/>
                 <br/>
                 <div className="card" style={{width: 350}}>

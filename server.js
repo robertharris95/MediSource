@@ -1,4 +1,5 @@
 const express = require("express");
+
 const passport = require("passport");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -27,7 +28,7 @@ app.use( (req, res, next) => {
   return next();
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds157276.mlab.com:57276/heroku_fk5k08f3");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/medisource");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
