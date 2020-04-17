@@ -47,7 +47,95 @@ const postSeed = [
         user: "Dr.Advir T.S. Mint",
         title: "10 EASY STEPS TO BECOME A FAMOUS DOCTOR! NUMBER 9 WILL SHOCK YOU!",
         body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
-    }
+    },
+    //--------------------
+    {
+        userpic:"https://cdn1.edgedatg.com/aws/v2/abc/GreysAnatomy/person/736607/facf3967a07b23061ebc646d0b30cb45/579x579-Q90_facf3967a07b23061ebc646d0b30cb45.jpg",
+        image: "https://picsum.photos/350/350",
+        user: "Dr. Meredith Grey",
+        title: "Why Romance in the Workplace is Inappropriate",
+        body:"First of all, thank you all very much for your kind donations! Your masks have helped keep the PPE for our workers stable in the wake of this crisis. If you wish to further donate, please bring masks to 111 1st St., Houston, TX, 77817. Ask for Sheila, she'll know who to bring them to. God Bless!"
+    },
+    {
+        userpic:"https://www.frontlinegenomics.com/wp-content/uploads/Dr-House--640x400.jpeg",
+        image: "https://picsum.photos/500/500",
+        user: "Dr. Gregory House",
+        title: "How I became a Doctor:",
+        body:"About one in seven people entering a hospital need blood. One pint of blood can save up to three lives. Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months. "
+    },
+    {
+        userpic:"https://thenypost.files.wordpress.com/2020/03/dr-oz-sex-coronavirus.jpg?quality=90&strip=all",
+        image: "https://picsum.photos/250/300",
+        user: "Dr. Mehmet Oz",
+        title: "Do Avocados cause CANCER?",
+        body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
+    },
+     //--------------------
+    {
+        userpic:"https://cdn1.thr.com/sites/default/files/imagecache/landscape_928x523/2011/09/phil_a.jpg",
+        image: "https://picsum.photos/350/350",
+        user: "Dr. Phillip Calvin McGraw",
+        title: "Why it's Important to Discipline your Kids",
+        body:"First of all, thank you all very much for your kind donations! Your masks have helped keep the PPE for our workers stable in the wake of this crisis. If you wish to further donate, please bring masks to 111 1st St., Houston, TX, 77817. Ask for Sheila, she'll know who to bring them to. God Bless!"
+    },
+    {
+        userpic:"https://upload.wikimedia.org/wikipedia/commons/8/89/Anthony_S._Fauci%2C_M.D.%2C_NIAID_Director_%2826759498706%29.jpg",
+        image: "https://picsum.photos/500/500",
+        user: "Dr. Anthony Fauci",
+        title: "Important Coronavirus Information",
+        body:"About one in seven people entering a hospital need blood. One pint of blood can save up to three lives. Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months. "
+    },
+    {
+        userpic:"https://vignette.wikia.nocookie.net/scrubs/images/6/6f/JD_S5.jpg/revision/latest?cb=20111026062354",
+        image: "https://picsum.photos/250/300",
+        user: "Dr.John Michael Dorian",
+        title: "Test Post",
+        body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
+    },
+    //--------------------
+    {
+        userpic:"https://www.writeups.org/wp-content/uploads/Leonard-Bones-McCoy-Star-Trek-DeForest-Kelley.jpg",
+        image: "https://picsum.photos/350/350",
+        user: "Dr. Leonard McCoy",
+        title: "I'm a Doctor not a Physicist!",
+        body:"First of all, thank you all very much for your kind donations! Your masks have helped keep the PPE for our workers stable in the wake of this crisis. If you wish to further donate, please bring masks to 111 1st St., Houston, TX, 77817. Ask for Sheila, she'll know who to bring them to. God Bless!"
+    },
+    {
+        userpic:"https://images-na.ssl-images-amazon.com/images/I/412opk5n9YL._AC_.jpg",
+        image: "https://picsum.photos/500/500",
+        user: "Dr. Douglas Howser",
+        title: "How to Become a Doctor at 11",
+        body:"About one in seven people entering a hospital need blood. One pint of blood can save up to three lives. Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months. "
+    },
+    {
+        userpic:"https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Addison_image.jpg/250px-Addison_image.jpg",
+        image: "https://picsum.photos/250/300",
+        user: "Dr.Addison Montgomery",
+        title: "Leaving your Hospital for a Private Practice: Do's and Don'ts.",
+        body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
+    },
+    //--------------------
+    {
+        userpic:"https://assets.bonappetit.com/photos/57bf2c726a6acdf3485df6a8/master/pass/claire-saffitz.jpg",
+        image: "https://picsum.photos/350/350",
+        user: "Dr. Claire Saffitz",
+        title: "Healthy Recipes for you and your family",
+        body:"First of all, thank you all very much for your kind donations! Your masks have helped keep the PPE for our workers stable in the wake of this crisis. If you wish to further donate, please bring masks to 111 1st St., Houston, TX, 77817. Ask for Sheila, she'll know who to bring them to. God Bless!"
+    },
+    {
+        userpic:"https://vignette.wikia.nocookie.net/friends/images/c/c9/Dr_drake_ramoray_joey_friends-1-.jpg/revision/latest/top-crop/width/720/height/900?cb=20120916092442",
+        image: "https://picsum.photos/500/500",
+        user: "Dr. Drake Ramoray",
+        title: "How you doin'??",
+        body:"About one in seven people entering a hospital need blood. One pint of blood can save up to three lives. Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months. "
+    },
+    {
+        userpic:"https://i.insider.com/5b100a745e48ec4c008b462d?width=1100&format=jpeg&auto=webp",
+        image: "https://picsum.photos/250/300",
+        user: "Dr.Sandra Lee",
+        title: "Dermatology Tips for the Quarantine",
+        body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
+    },
 ];
 
 db.User
