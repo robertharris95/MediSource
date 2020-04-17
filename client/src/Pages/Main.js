@@ -30,7 +30,7 @@ function Main(){
         {
             dbArray.reverse().map(element => {
             return(
-                <Post image= {element.image} alt= {element.alt} title= {element.title} body= {element.body} username={element.user}/>
+                <Post image= {element.image} alt= {element.alt} title= {element.title} body= {element.body} username={element.user} userpic={element.userpic}/>
             )})
         }
         </div>

@@ -48,8 +48,12 @@ function SignUpModal() {
                 <div className="form-group">
                     <input type="password" name="password" onChange={handleInput} className="form-control form-control-lg" id="InputPassword" placeholder=" Enter Password" value={registerObj.password}/>
                 </div>
+                <div className="form-group">
+                    <label htmlFor="PostFile1"><h5>Add a profile picture:</h5></label>
+                    <input type="file" className="form-control-file" id="PostPicFile" onChange= {handleInput}/>
+                </div>
                 <div className="text-center">
-                <button type="submit" onClick={handleClick} className="btn btn-primary btn-block mx-auto w-75 " data-dismiss="modal">Register</button>
+                    <button type="submit" onClick={handleClick} className="btn btn-primary btn-block mx-auto w-75 " data-dismiss="modal">Register</button>
                 </div>
                 </form>
                     <br/>

@@ -33,7 +33,7 @@ function Post(props) {
                 <div className="row">
                     <div className="col-1">
                     {/* Profile picture with clickable link */}
-                    <img src="https://via.placeholder.com/350" alt="Profile Pic" className="rounded-circle post-pic"/>
+                    <img src={props.userpic} alt={props.username} className="rounded-circle post-pic"/>
                     </div>
                     <div className="col-8">
                     {/* Name with clickable link */}
