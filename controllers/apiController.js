@@ -1,5 +1,4 @@
 const db = require("../models");
-// const passport = require("../passport");
 
 module.exports = {
     getDB: function(req, res) {
@@ -8,6 +7,14 @@ module.exports = {
           .sort({ date: -1 })
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
+    },
+
+    session: function (req, res, next) {
+       console.log('====== user!! =====')
+       console.log(req.session.passport.user);
+       if (req.session.passport.user) {
+           res.json({ user: req.session.passport.user._id })
+       }
     },
 
     registerUser: function(req, res) {
@@ -47,18 +54,9 @@ module.exports = {
     
     newPost: function(req, res){
         db.Post
-          .create(req.body)
-          .then(dbPost => db.User.findOneAndUpdate({ _id: req.params.id }, { postrel: dbPost._id }, { new: true }))
-          .then(dbModel => res.json(dbModel))
-          .catch(err => res.status(422).json(err))
+            .create(req.body)
+            .then(dbPost => db.User.findOneAndUpdate({ _id: req.params.id }, { postrel: dbPost._id }, { new: true }))
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err))
     },
-
-    // userInfo: function(req, res){
-    //     console.log(req)
-    //     if (req.user) {
-    //         res.json({user: req.user})
-    //     } else {
-    //         res.json({ user: null})
-    //     }
-    // }
 }

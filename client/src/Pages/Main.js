@@ -17,28 +17,28 @@ function Main(){
 
     useEffect(()=> {
         getAll()
-        // getUser()
+        getUser()
     }, [])
 
-    // function getUser() {
-    //     axios.get('/').then(response => {
-    //         console.log('Get user response: ')
-    //         console.log(response.data)
-    //         if (response.data.user) {
-    //           console.log('Get User: There is a user saved in the server session: ')
+    function getUser() {
+        axios.get('/api/data/session').then(response => {
+            console.log('Get user response: ')
+            console.log(response.data)
+            if (response.data.user) {
+              console.log('Get User: There is a user saved in the server session: ')
       
-    //         //   setLog({
+            //   setLog({
             
-    //         //   })
-    //         } else {
-    //           console.log('Get user: no user');
-    //         //   this.setState({
-    //         //     loggedIn: false,
-    //         //     username: null
-    //         //   })
-    //         }
-    //       })
-    // }
+            //   })
+            } else {
+              console.log('Get user: no user');
+            //   this.setState({
+            //     loggedIn: false,
+            //     username: null
+            //   })
+            }
+          })
+    }
     function getAll() {
         API.getDB()
           .then(res => getArray(res.data))

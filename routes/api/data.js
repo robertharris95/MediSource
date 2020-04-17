@@ -4,7 +4,6 @@ const passport = require("../../validation")
 
 router.route("/")
   .get(apiController.getDB)
-  // .get(apiController.userInfo)
   .post(passport.authenticate('local') ,(req, res) => {
     console.log('logged in', req.body.username);
     var userInfo = {
@@ -12,14 +11,18 @@ router.route("/")
     };
     res.send(userInfo);
   })
-  
+
+router.route("/session")
+  .get(apiController.session)
+
 router.route("/new")
   .post(apiController.registerUser);
 
 router.route("/newPost")
   .post(apiController.newPost);
 
-// router.post("/")
+// router.post("/uploads")
+//   .post(apiController.upload);
 
 
 

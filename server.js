@@ -1,13 +1,24 @@
-const express = require("express");
+require("dotenv").config();
 
+const express = require("express");
 const passport = require("passport");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const expfile = require("express-fileupload");
 const session = require("express-session");
 const MongosStore = require("connect-mongo")(session);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.use(expfile({ useTempFiles: true }));
+const cloudinary = require("cloudinary").v2
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_USER,
+  api_key: process.env.CLOUDINARY_API,
+  api_secret: process.env.CLOUDINARY_SECRET
+})
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
@@ -25,6 +36,7 @@ app.use(
 app.use(passport.session());
 app.use( (req, res, next) => {
   console.log('req.session', req.session);
+  console.log('user', req.session.passport.user._id)
   return next();
 });
 

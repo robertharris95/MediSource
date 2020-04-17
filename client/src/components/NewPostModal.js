@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import API from "../utils/API";
+import axios from "axios";
 
 function NewPostModal() {
     const [PostObj, setPost] = useState({
@@ -8,15 +9,33 @@ function NewPostModal() {
         image:"",
         user:""
     });
+    const [session, setSession] = useState({
+        id: ""
+    });
 
-    // const [id, setId] = useState({
-    //     id: ""
-    // });
+    useEffect(() => {
+        // getSession()
+    })
+
+    function getSession(){
+        API.session()
+          .then(res => console.log(res.data));
+    }
 
     function loading(){
         API.getDB()
           .then(res => setPost(res.data))
           .catch(err => console.log(err))
+    }
+    function handleImage(e){
+        const files= e.target.files[0];
+        let formData = new FormData();
+            formData.append("upload_preset", "medisource")
+            formData.append("file", files)
+            console.log(formData);
+            axios.post("https://api.cloudinary.com/v1_1/andreslong/image/upload", formData)
+              .then(res => setPost({...PostObj, image: res.data.url}))
+        // setPost({...PostObj, image: formData});
     }
 
     function handleInput(e){
@@ -53,7 +72,7 @@ function NewPostModal() {
                 <br/>
                     <textarea className="form-control" id="PostTextarea1" rows="5" type="Body" name="body" onChange={handleInput} placeholder="Say Something..."></textarea>
                     <label htmlFor="PostFile1">Add picture files here:</label>
-                    <input type="file" className="form-control-file" id="PostPicFile" onChange= {handleInput}/>
+                    <input type="file" className="form-control-file" id="PostPicFile" onChange= {handleImage}/>
                     <br/>
                     <button type="submit" className="btn btn-primary mb-2" onClick={handleClick} data-dismiss="modal">Post</button>
                 </form>
