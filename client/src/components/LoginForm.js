@@ -10,7 +10,9 @@ function LoginForm() {
         password: "",
         redirectTo: null
     });
-
+    // const [log, setLog] = useState({
+    //     loggedUser: ""
+    // })
     function handleChange (e) {
         const {name, value} = e.target;
         setField({...field, [name]: value});
@@ -29,10 +31,11 @@ function LoginForm() {
               console.log('login response: ')
               console.log(res)
             if (res.status === 200) {
+                // setLog({...log, loggedUser: field.username})
                 setField({
                     redirectTo: true
                 })
-                console.log("200")
+                // console.log(log)
             }
         }).catch(err => console.log(err))
         
@@ -52,7 +55,7 @@ function LoginForm() {
                 <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div className="form-group">
-                <input type="password" id="password" name="password" onChange={handleChange} id="pass" className="form-control form-control-lg" placeholder="Password" value={field.password}/>
+                <input type="password" name="password" onChange={handleChange} id="pass" className="form-control form-control-lg" placeholder="Password" value={field.password}/>
             </div>
             <div className="text-center">
             <button type="submit" onClick = {loginAttempt} className="btn btn-primary btn-block mx-auto w-75 ">Log In</button>

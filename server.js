@@ -3,6 +3,7 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const session = require("express-session");
+const MongosStore = require("connect-mongo")(session);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -16,7 +17,8 @@ app.use(
   session ({
     secret: 'craggy-horizon',
     resave: false, //required
-    saveUninitialized: false //required
+    saveUninitialized: false, //required
+    store: new MongosStore({mongooseConnection: mongoose.connection})
   })
 )
 app.use(passport.session());
@@ -25,7 +27,7 @@ app.use( (req, res, next) => {
   return next();
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://username:password1@ds157276.mlab.com:57276/heroku_fk5k08f3");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds157276.mlab.com:57276/heroku_fk5k08f3");
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

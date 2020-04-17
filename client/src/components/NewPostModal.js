@@ -6,9 +6,12 @@ function NewPostModal() {
         title:"",
         body:"",
         image:"",
-        user:"",
-        postAttempt: false
+        user:""
     });
+
+    // const [id, setId] = useState({
+    //     id: ""
+    // });
 
     function loading(){
         API.getDB()
@@ -22,17 +25,10 @@ function NewPostModal() {
     };
 
     function handleClick(e){
-<<<<<<< HEAD
         // e.preventDefault();
         if (PostObj.title && PostObj.body) {
             API.postUser(PostObj)
               .then(res => loading())
-=======
-        e.preventDefault();
-        console.log("click")
-        if (PostObj.title && PostObj.body) {
-            API.PostUser(PostObj)
->>>>>>> c70b6356e2be4a2f51ec6da1c8b807f79695b9e3
               .catch(err => console.log(err));
             // console.log(PostObj);
         }

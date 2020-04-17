@@ -48,7 +48,17 @@ module.exports = {
     newPost: function(req, res){
         db.Post
           .create(req.body)
+          .then(dbPost => db.User.findOneAndUpdate({ _id: req.params.id }, { postrel: dbPost._id }, { new: true }))
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err))
-    }
+    },
+
+    // userInfo: function(req, res){
+    //     console.log(req)
+    //     if (req.user) {
+    //         res.json({user: req.user})
+    //     } else {
+    //         res.json({ user: null})
+    //     }
+    // }
 }

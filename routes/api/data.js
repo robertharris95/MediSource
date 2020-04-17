@@ -4,20 +4,24 @@ const passport = require("../../validation")
 
 router.route("/")
   .get(apiController.getDB)
-  .post(passport.authenticate('local')
-  ,(req, res) => {
-      console.log('logged in', req.body.username);
-      var userInfo = {
-          username: req.body.username
-      };
-      res.send(userInfo);
-})
-
+  // .get(apiController.userInfo)
+  .post(passport.authenticate('local') ,(req, res) => {
+    console.log('logged in', req.body.username);
+    var userInfo = {
+      username: req.body.username
+    };
+    res.send(userInfo);
+  })
+  
 router.route("/new")
   .post(apiController.registerUser);
 
 router.route("/newPost")
   .post(apiController.newPost);
+
+// router.post("/")
+
+
 
 //   .post(function (req, res, next) {
 //     console.log('routes/user.js, login, req.body: ');

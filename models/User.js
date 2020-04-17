@@ -4,12 +4,12 @@ const bcrypt = require("bcryptjs");
 mongoose.promise = Promise
 
 const userSchema = new Schema({
-
     username: { type: String, unique: false, required: false },
 	password: { type: String, unique: false, required: false },
     name: { type: String, required: false },
+    profilepic: String,
+    postrel: { type: Schema.Types.ObjectId, ref: "Post"},
     date: { type: Date, default: Date.now }
-
 })
 
 userSchema.methods = {
