@@ -20,6 +20,12 @@
   object-fit: cover;
   height: 75px;
 }
+
+.largeProfPic{
+  width: 350px;
+  object-fit: cover;
+  height: 350px;
+}
 /* Sidebar  */
 
 body {
