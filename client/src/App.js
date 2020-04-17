@@ -7,41 +7,41 @@ import Profile from "./Pages/Profile"
 import axios from "axios"
 
 class App extends Component {
-    constructor() {
-        super()
-        this.state = {
-            loggedIn: false,
-            username: null
-        }
-    }
+    // constructor() {
+    //     super()
+    //     this.state = {
+    //         loggedIn: false,
+    //         username: null
+    //     }
+    // }
 
-    componentDidMount() {
-        this.getUser()
-    }
+    // componentDidMount() {
+    //     this.getUser()
+    // }
 
-    updateUser(userObject) {
-        this.setState(userObject)
-    }
-    getUser() {
-        axios.get('/user/').then(response => {
-            console.log('Get user response: ')
-            console.log(response.data)
-            if (response.data.user) {
-              console.log('Get User: There is a user saved in the server session: ')
+    // updateUser(userObject) {
+    //     this.setState(userObject)
+    // }
+    // getUser() {
+    //     axios.get('/').then(response => {
+    //         console.log('Get user response: ')
+    //         console.log(response)
+    //         if (response.data.user) {
+    //           console.log('Get User: There is a user saved in the server session: ')
       
-              this.setState({
-                loggedIn: true,
-                username: response.data.user.username
-              })
-            } else {
-              console.log('Get user: no user');
-              this.setState({
-                loggedIn: false,
-                username: null
-              })
-            }
-          })
-    }
+    //           this.setState({
+    //             loggedIn: true,
+    //             username: response.data.user.username
+    //           })
+    //         } else {
+    //           console.log('Get user: no user');
+    //           this.setState({
+    //             loggedIn: false,
+    //             username: null
+    //           })
+    //         }
+    //       })
+    // }
         render(){
     
             return(

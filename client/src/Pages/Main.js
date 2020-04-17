@@ -6,14 +6,39 @@ import NewPostModal from "../components/NewPostModal";
 import HelpModal from "../components/HelpModal";
 import API from "../utils/API";
 import ComingSoon from "../components/ComingSoon";
+import axios from "axios";
 
 function Main(){
     const [dbArray, getArray] = useState([]);
+    const [log, setLog] = useState({
+        loggedIn: false,
+        username: null
+    });
 
     useEffect(()=> {
         getAll()
+        getUser()
     }, [])
 
+    function getUser() {
+        axios.get('/api/data/session').then(response => {
+            console.log('Get user response: ')
+            console.log(response.data)
+            if (response.data.user) {
+              console.log('Get User: There is a user saved in the server session: ')
+      
+            //   setLog({
+            
+            //   })
+            } else {
+              console.log('Get user: no user');
+            //   this.setState({
+            //     loggedIn: false,
+            //     username: null
+            //   })
+            }
+          })
+    }
     function getAll() {
         API.getDB()
           .then(res => getArray(res.data))
