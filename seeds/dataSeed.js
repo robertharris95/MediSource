@@ -138,7 +138,9 @@ const postSeed = [
     },
 ];
 
-db.User
+let seed = {
+seedUser: function(){
+    db.User
   .remove({})
   .then(() => db.User.collection.insertMany(userSeed))
   .then(data => {
@@ -148,8 +150,10 @@ db.User
       console.error(err);
       process.exit(1);
   });
+},
 
-db.Entity
+seedEntity: function(){
+    db.Entity
   .remove({})
   .then(() => db.Entity.collection.insertMany(entitySeed))
   .then(data => {
@@ -159,8 +163,9 @@ db.Entity
       console.error(err);
       process.exit(1);
   });
-
-db.Post
+},
+seedPost: function(){
+    db.Post
 .remove({})
 .then(() => db.Post.collection.insertMany(postSeed))
 .then(data => {
@@ -170,3 +175,7 @@ db.Post
     console.error(err);
     process.exit(1);
 });
+}
+}
+
+module.exports = seed;

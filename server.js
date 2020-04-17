@@ -1,4 +1,5 @@
 require("dotenv").config();
+var seed= require("./seeds/dataSeed")
 
 const express = require("express");
 const passport = require("passport");
@@ -52,3 +53,11 @@ app.use(routes);
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+function runSeeds(){
+  seed.seedPost();
+  // seed.seedEntity();
+  // seed.seedUser();
+}
+
+runSeeds();
