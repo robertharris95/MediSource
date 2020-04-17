@@ -90,7 +90,7 @@ const postSeed = [
         image: "https://picsum.photos/250/300",
         user: "Dr.John Michael Dorian",
         title: "Test Post",
-        body:"Publicity in medical science most commonly comes in the form of research contribution. A high volume of high quality research in a given field usually has the ability to shape the way medicine is practiced and encourages the researching physician or scientist to continue on the research path, repeating the cycle. Combining curiosity with an innovative outlook capable of producing novel ideas is a great start to contribute something truly original to whichever field one chooses to enter. From this, understanding the problems faced in the field currently may inspire a novel solution. Attempts made to solve a given problem successfully often become very popular. Fame, however, should not be the inspiration for research. If medicine is calling an individual to create solutions for new problems, the inspiration should come from the desire to defend a patient's well-being and life- to act benevolently in their care, while doing no harm."
+        body:"Siri post to MediSource. Hey Siri. Ugh it's not working. Man I want an avocado right now."
     },
     //--------------------
     {
